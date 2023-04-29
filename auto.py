@@ -9,12 +9,12 @@ root_path = os.path.dirname(__file__)
 
 # 读取config
 # 从config.json中读取
-# config_path = os.path.join(root_path,'config.json')
-# with open(config_path,'r') as f:
-#     config = json.load(f)
+config_path = os.path.join(root_path,'config.json')
+with open(config_path,'r') as f:
+    config = json.load(f)
 ## 从secret中读取
-secrets_json = os.environ['MY_CONFIG_JSON']
-config = json.loads(secrets_json)
+# secrets_json = os.environ['MY_CONFIG_JSON']
+# config = json.loads(secrets_json)
 
 baseUrl = config['baseUrl']
 user = config['user']
