@@ -20,14 +20,12 @@ jobs:
         MY_CONFIG_JSON: ${{ secrets.MY_CONFIG_JSON }}
       run: 
         python auto.py
-		
     - name: commit
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         git add .
         git commit -m 'update new opml' || echo "nothing to commit"
-		
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
