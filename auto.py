@@ -4,74 +4,55 @@ import json
 import os
 from datetime import date
 
-# 路径
-root_path = os.path.dirname(__file__)
+today_str = date.today().strftime('%Y-%m-%d')
 
-# 读取config
-# 从config.json中读取
-# config_path = os.path.join(root_path,'config.json')
-# with open(config_path,'r') as f:
-#     config = json.load(f)
-## 从secret中读取
+# Load configuration from JSON file
+root_path = os.path.dirname(__file__)
 secrets_json = os.environ['MY_CONFIG_JSON']
 config = json.loads(secrets_json)
 
-baseUrl = config['baseUrl']
-user = config['user']
-password = config['password']
-
-# 构造登录请求，获取 Session ID
-headers = {'Content-Type': 'application/json'}
-loginUrl = f"{baseUrl}api/"
-data = {'op': 'login', 'user': user, 'password': password}
-
-response = requests.post(loginUrl, headers=headers, data=json.dumps(data))
+# Login to get session ID
+login_url = f"{config['baseUrl']}api/"
+login_data = {'op': 'login',
+              'user': config['user'],
+              'password': config['password']}
+login_headers = {'Content-Type': 'application/json'}
+response = requests.post(login_url,
+                         headers=login_headers,
+                         json=login_data)
 session_id = response.json()['content']['session_id']
 
-#构造获取 OPML 文件的请求，附带 Session ID
-opmlUrl = f"{baseUrl}backend.php?op=opml&method=export"
-response = requests.get(opmlUrl, cookies={'ttrss_sid': session_id})
+# Download OPML file and save to disk
+opml_url = f"{config['baseUrl']}backend.php?op=opml&method=export"
+opml_response = requests.get(opml_url,
+                             cookies={'ttrss_sid': session_id})
+opml_name = f"feed_{today_str}.opml"
+opml_path = os.path.join(root_path, "Opml", opml_name)
+with open(opml_path, 'wb') as f:
+    f.write(opml_response.content)
 
-# 获取当前日期
-today = date.today()
-today_str = today.strftime("%Y-%m-%d")
+# Parse OPML file and generate Markdown file
+root = ET.parse(OpmlPath).getroot()
 
-# 输出ompl文件
-OpmlName = f"feed_{today_str}.opml"
-OpmlPath = os.path.join(root_path,"Opml",OpmlName)
-with open(OpmlPath, 'wb') as f:
-    f.write(response.content)
+outlines = [
+    {
+        'title': outline.get('text'),
+        'feed_url': outline.get('xmlUrl'),
+        'html_url': outline.get('htmlUrl'),
+    }
+    for outline in root.iter('outline')
+    if outline.get('xmlUrl')
+]
 
-# 解析opml文件
-tree = ET.parse(OpmlPath)
-root = tree.getroot()
+md_table = (
+    "| Title | Feed URL | Html URL |\n"
+    "| --- | --- | --- |\n"
+    + "\n".join(
+        f"| [{outline['title']}]({outline['feed_url']}) | {outline['feed_url']} | {outline['html_url']}|"
+        for outline in outlines
+    )
+)
 
-outlines = []
-
-for outline in root.findall('.//outline'):
-    title = outline.get('text')
-    feed_url = outline.get('xmlUrl')
-    html_url = outline.get('htmlUrl')
-    if feed_url:
-        outlines.append({'title': title, 'feed_url': feed_url,'html_url': html_url})
-
-md_links = []
-for outline in outlines:
-    md_link = f"[{outline['title']}]({outline['feed_url']})"
-    md_links.append(md_link)
-
-md_text = "\n".join(md_links)
-
-md_table = "| Title | Feed URL | Html URL|\n| --- | --- | --- |\n"
-
-for outline in outlines:
-    md_table += f"| {outline['title']} | {outline['feed_url']} | {outline['html_url']}|\n"
-
-# 输出为Markdown文件
-MarkdownName = f"feed_{today_str}.md"
-MarkdownPath = os.path.join(root_path,"Markdown",MarkdownName)
-with open(MarkdownPath,'w',encoding='utf-8') as f:
+md_path = os.path.join(root_path, "Markdown", f"feed_{today_str}.md")
+with open(md_path, 'w', encoding='utf-8') as f:
     f.write(md_table)
-
-
-
