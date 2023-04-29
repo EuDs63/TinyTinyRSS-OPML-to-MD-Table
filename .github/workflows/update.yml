@@ -15,7 +15,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-		
     - name: Work
       env:
         MY_CONFIG_JSON: ${{ secrets.MY_CONFIG_JSON }}
