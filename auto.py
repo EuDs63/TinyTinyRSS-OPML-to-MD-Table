@@ -8,13 +8,14 @@ from datetime import date
 root_path = os.path.dirname(__file__)
 
 # 读取config
-## 从config.json中读取
+# 从config.json中读取
 # config_path = os.path.join(root_path,'config.json')
 # with open(config_path,'r') as f:
 #     config = json.load(f)
 ## 从secret中读取
 secrets_json = os.environ['MY_CONFIG_JSON']
 config = json.loads(secrets_json)
+
 baseUrl = config['baseUrl']
 user = config['user']
 password = config['password']
@@ -34,8 +35,10 @@ response = requests.get(opmlUrl, cookies={'ttrss_sid': session_id})
 # 获取当前日期
 today = date.today()
 today_str = today.strftime("%Y-%m-%d")
+
+# 输出ompl文件
 OpmlName = f"feed_{today_str}.opml"
-OpmlPath = os.path.join(root_path,OpmlName)
+OpmlPath = os.path.join(root_path,"Opml",OpmlName)
 with open(OpmlPath, 'wb') as f:
     f.write(response.content)
 
@@ -66,7 +69,7 @@ for outline in outlines:
 
 # 输出为Markdown文件
 MarkdownName = f"feed_{today_str}.md"
-MarkdownPath = os.path.join(root_path,MarkdownName)
+MarkdownPath = os.path.join(root_path,"Markdown",MarkdownName)
 with open(MarkdownPath,'w',encoding='utf-8') as f:
     f.write(md_table)
 
