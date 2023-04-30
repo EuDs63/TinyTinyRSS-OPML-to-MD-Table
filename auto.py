@@ -55,13 +55,7 @@ for outline in root.findall('.//outline'):
     if feed_url:
         outlines.append({'title': title, 'feed_url': feed_url,'html_url': html_url})
 
-md_links = []
-for outline in outlines:
-    md_link = f"[{outline['title']}]({outline['feed_url']})"
-    md_links.append(md_link)
-
-md_text = "\n".join(md_links)
-
+md_text = f"**更新时间：{today}**\n"
 md_table = "| Title | Feed URL | Html URL|\n| --- | --- | --- |\n"
 
 for outline in outlines:
@@ -71,6 +65,7 @@ for outline in outlines:
 MarkdownName = f"feed_{today_str}.md"
 MarkdownPath = os.path.join(root_path,"Markdown",MarkdownName)
 with open(MarkdownPath,'w',encoding='utf-8') as f:
+    f.write(md_text)
     f.write(md_table)
 
 

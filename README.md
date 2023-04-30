@@ -24,7 +24,7 @@
    - 后来注意到登录成功是会返回session值的，于是先用curl试验了下。
      ```bash
      # 登录并获取Session ID
-     SESSION=$(curl -s -d '{"op":"login","user":"admin","password":"123456"}' http://example.com/tt-rss/api/ | python -c "import sys, json; print(json.load(sys.stdin)['content']['session_id'])")
+     SESSION=$(curl -s -d '{"op":"login","user":"user","password":"password"}' http://example.com/tt-rss/api/ | python -c "import sys, json; print(json.load(sys.stdin)['content']['session_id'])")
 
      #获得opml文件
      curl -o my_tiny_tiny_rss.opml 'http://example.com/tt-rss/backend.php?op=opml&method=export' --cookie "ttrss_sid=${SESSION}"
