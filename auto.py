@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import requests
 import json
 import os
+import re
 from datetime import date
 
 # 路径
@@ -68,5 +69,16 @@ with open(MarkdownPath,'w',encoding='utf-8') as f:
     f.write(md_text)
     f.write(md_table)
 
+# 打开README.md文件，替换Markdown文件中的内容
+readme_path = os.path.join(root_path,"README.md")
+with open(readme_path,'r',encoding='utf-8') as f:
+    readme = f.read()
 
+# 替换README.md中我的订阅之后的内容，以实时更新
+pattern = r'## 我的订阅(.*)\n'
+replace = '## 我的订阅\n'+md_text + md_table+'\n'
+readme = re.sub(pattern,replace,readme,flags=re.DOTALL)
+
+with open(readme_path,'w',encoding='utf-8') as f:
+    f.write(readme)
 
