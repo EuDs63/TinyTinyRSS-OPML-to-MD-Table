@@ -5,7 +5,8 @@
 1. 获取opml文件
 2. 解析opml文件
 3. 按表格格式写入MarkDown中
-
+4. 每次运行时，将自动修改README.md
+   
 ## 使用
 1. fork本仓库
 2. 添加一个Repository secret。
@@ -14,7 +15,7 @@
 ## TodoList
 - [x] 使用GithubAction实现定时更新
 - [ ] 当添加新的订阅时自动更新
-- [x] 每次运行时，将自动修改README
+- [x] 每次运行时，将自动修改README.md
 - [ ] 将订阅列表同步到博客中。
 
 ## 历程
@@ -36,7 +37,39 @@
    - Yml文件的格式问题。这个可以用[YAML Validator](https://codebeautify.org/yaml-validator)来检查。Vscode应该也有相应的插件吧。
    - 运行时需要用到的变量，是用的secret。我之前以为secret的value只能是字符串。但[Github Action中python获取仓库的secrets](https://nekokiku.cn/2020/12/22/2020-12-22-Github-Action%E4%B8%ADpython%E8%8E%B7%E5%8F%96%E4%BB%93%E5%BA%93%E7%9A%84secrets/)中提到，可以把一整个yml文件放在value里面。所以我就想那json文件应该也可以。试了下确实能行。这样我的代码需要修改的地方就很少了。
    - workflow的触发方式,要添加手动触发，需加上`workflow_dispatch:`
-
+5. 尝试实现功能4：每次运行时，将自动修改README.md;
+   - 先是用正则表达式实现：读取文件内容到一个字符串中，再去匹配`r'## 我的订阅(.*)\n'`并替换。这里踩了一个坑：刚开始我写的是`r'## 我的订阅(.*?)\n'`，非贪婪匹配，只匹配了一个换行。
+   - 感觉这个方法不是很好，就想着查找所要替换的内容的开头在文件中的位置，然后直接在那里开始写。这个折腾了比较久。尝试了如下写法：
+  
+     1.  这个的问题是还是将一整个文件的内容都赋给了一个字符串
+      ```python
+       readme = f.read() 
+       start = readme.find('## 我的订阅\n')  
+       f.seek(start)
+      ```
+     2. 写之前我看不出来代码有什么问题，但运行结果是在文件的末尾追加replace。觉得是write的问题，但不知道为什么
+     ```python
+        if '## 我的订阅\n' in line:
+            start_line_num = line_num  # 记录所在行号
+            f.seek(0)  # 重新定位到文件开头
+            for i in range(start_line_num):  
+                f.readline()  # 读取到标题所在行
+            # print(f.tell()) 此时文件指针位于所需位置
+            f.write(replace)  # 文件指针自动变到了末尾
+            break
+     ```
+     3. 使用了seek
+     ```python
+        if '## 我的订阅\n' in line:
+            title_pos = f.tell()  # 使用f.tell()记录标题行位置
+            #print(title_pos)
+            f.seek(title_pos)   # 定位到标题行位置  
+            replace2 = md_text + md_table+'\n'
+            f.write(replace2)  
+            break      
+     ```
+6. 添加了运行时参数，这样开发的时候就不用特地去注释代码了。
+   
 ## 参考
 - [API Reference](https://tt-rss.org/wiki/ApiReference)
 - [curl命令实现上网认证登录](https://www.cnblogs.com/jiangleads/p/10636696.html)
@@ -118,4 +151,5 @@
 | 海德沙龙·翻译组 | https://translations.headsalon.org/index.xml | https://translations.headsalon.org/|
 | 路人酱 | https://passerby5566.xlog.app/feed/xml | https://passerby5566.xlog.app|
 | 酷 壳 – CoolShell | https://coolshell.cn/feed | https://coolshell.cn|
+
 
