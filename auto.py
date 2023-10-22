@@ -20,11 +20,11 @@ if len(sys.argv) > 1:
         # 从secret中读取
         secrets_json = os.environ['MY_CONFIG_JSON']
         config = json.loads(secrets_json)
-else: 
+else:
     # 默认从config.json中读取
     config_path = os.path.join(root_path,'config.json')
     with open(config_path,'r') as f:
-        config = json.load(f)    
+        config = json.load(f)
 
 
 baseUrl = config['baseUrl']
@@ -69,8 +69,17 @@ for outline in root.findall('.//outline'):
 md_text = f"**更新时间：{today}**\n"
 md_table = "| Title | Feed URL | Html URL|\n| --- | --- | --- |\n"
 
+# json文件的输出
+data = []
+
 for outline in outlines:
     md_table += f"| {outline['title']} | {outline['feed_url']} | {outline['html_url']}|\n"
+    item = {
+        "title": outline['title'],
+        "feed_url": outline['feed_url'],
+        "html_url": outline['html_url']
+    }
+    data.append(item)
 
 # 输出为Markdown文件
 MarkdownName = f"feed_{today_str}.md"
@@ -78,6 +87,18 @@ MarkdownPath = os.path.join(root_path,"Markdown",MarkdownName)
 with open(MarkdownPath,'w',encoding='utf-8') as f:
     f.write(md_text)
     f.write(md_table)
+
+# 输出为JSON文件
+output_data = {
+    "data": data,
+    "last_updated": today,  # 添加当前时间的时间戳
+    "count": len(outlines)
+}
+
+JsonName = f"feed_{today_str}.json"
+JsonPath = os.path.join(root_path,"Json",JsonName)
+with open(JsonPath,'w',encoding='utf-8') as f:
+    json.dump(output_data,f,ensure_ascii=False,indent=4)
 
 # 打开README.md文件
 readme_path = os.path.join(root_path,"README.md")
@@ -94,9 +115,9 @@ with open(readme_path, 'r+',encoding='utf-8') as f:
         if '## 我的订阅\n' in line:
             title_pos = f.tell()  # 使用f.tell()记录标题行位置
             #print(title_pos)
-            f.seek(title_pos)   # 定位到标题行位置  
+            f.seek(title_pos)   # 定位到标题行位置
             replace2 = md_text + md_table+'\n'
-            f.write(replace2)  
+            f.write(replace2)
             break
         line = f.readline()
 
@@ -111,22 +132,21 @@ with open(readme_path, 'r+',encoding='utf-8') as f:
 #             print(f.tell())
 #             f.seek(0)  # 重新定位到文件开头
 #             print(f.tell())
-#             for i in range(start_line_num):  
+#             for i in range(start_line_num):
 #                 f.readline()  # 读取到标题所在行
 #             # 此时文件指针位于所需位置,可以执行写入操作
 #             print(f.tell())
 #             f.seek(f.tell())   # 定位到标题行位置
-#             f.write(replace)  
+#             f.write(replace)
 #             print(f.tell())
 #             break
 #         line = f.readline()
 #         line_num += 1
 
-## 方法2：正则表达式实现 
+## 方法2：正则表达式实现
 # with open(readme_path,'r',encoding='utf-8') as f:
 #     readme = f.read()
 # pattern = r'## 我的订阅(.*)\n'
 # readme = re.sub(pattern,replace,readme,flags=re.DOTALL)
 # with open(readme_path,'w',encoding='utf-8') as f:
 #     f.write(readme)
-
