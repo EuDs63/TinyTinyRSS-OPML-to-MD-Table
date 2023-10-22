@@ -91,7 +91,7 @@ with open(MarkdownPath,'w',encoding='utf-8') as f:
 # 输出为JSON文件
 output_data = {
     "data": data,
-    "last_updated": today,  # 添加当前时间的时间戳
+    "last_updated": today_str,  # 添加当前时间的时间戳
     "count": len(outlines)
 }
 
