@@ -100,6 +100,10 @@ JsonPath = os.path.join(root_path,"Json",JsonName)
 with open(JsonPath,'w',encoding='utf-8') as f:
     json.dump(output_data,f,ensure_ascii=False,indent=4)
 
+JsonPath2 = os.path.join(root_path, "rss_subscription.json")
+with open(JsonPath2,'w',encoding='utf-8') as f:
+    json.dump(output_data,f,ensure_ascii=False,indent=4)
+
 # 打开README.md文件
 readme_path = os.path.join(root_path,"README.md")
 replace = '## 我的订阅\n'+md_text + md_table+'\n'
