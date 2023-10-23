@@ -69,6 +69,17 @@
             break      
      ```
 6. 添加了运行时参数，这样开发的时候就不用特地去注释代码了。
+7. 尝试实现自动推送到其他仓库的Github Action，最后发现我实际的需求其实没必要这样做。但从中收获了几点：
+   - `actions/checkout@v3`的使用：
+     ```
+      - name: clone EuDs63/EuDs63.github.io
+        uses: actions/checkout@v3
+        with:
+        repository: 'EuDs63/EuDs63.github.io'
+     ```
+   - `actions/checkout@v3`后，路径实例
+     `/home/runner/work/TinyTinyRSS-OPML-to-MD-Table/TinyTinyRSS-OPML-to-MD-Table`
+   
    
 ## 参考
 - [API Reference](https://tt-rss.org/wiki/ApiReference)

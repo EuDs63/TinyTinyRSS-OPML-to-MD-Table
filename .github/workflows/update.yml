@@ -35,41 +35,10 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-    # 确保 rss_subscription.json 文件生成后再进行复制
-    - name: Check If File Exists
-      run: |
-        pwd
-        
-        if [ -f rss_subscription.json ]; then
-          echo "File exists. Copying..."
-          cp -f rss_subscription.json /home/runner/work/TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json
-        else
-          echo "File does not exist. Skipping copy operation."
-        fi
-    # 接下来提交到EuDs63/EuDs63.github.io仓库
-    - name: clone EuDs63/EuDs63.github.io
-      uses: actions/checkout@v3
-      with:
-        repository: 'EuDs63/EuDs63.github.io'
-    - name: copy file to another repo
-      run: |
-        pwd
 
-        cp -f /home/runner/work/TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json data/rss/rss_subscription.json
+
+
+
+
     
-    # 把修改后的数据提交到 GitHub 仓库
-    - name: Git Add and Commit
-      uses: EndBug/add-and-commit@v9
-      with:
-        message: 'update rss data'
-        add: './data/rss'
-    # 把修改后的数据提交到 GitHub 仓库
-    # - name: Push changes
-    #   run: |
-    #     git config --global user.email "erica23187@gmail.com"
-    #     git config --global user.name "EuDs63"
-    #     git add data/rss/rss_subscription.json
-    #     git commit -m 'update new opml' || echo "nothing to commit"
-    #     git push
-    #   env:
-    #     TOKEN: ${{ secrets.PAT }}
+
