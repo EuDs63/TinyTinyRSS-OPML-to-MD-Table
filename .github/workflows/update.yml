@@ -24,7 +24,7 @@ jobs:
         MY_CONFIG_JSON: ${{ secrets.MY_CONFIG_JSON }}
       run: 
         python auto.py prod
-    - name: commit
+    - name: commit to this repo
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
@@ -34,3 +34,6 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: commit to another repo
+      run: |
+        ls
