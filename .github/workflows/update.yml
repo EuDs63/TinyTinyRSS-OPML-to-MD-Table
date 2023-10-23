@@ -35,6 +35,17 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    # 确保 rss_subscription.json 文件生成后再进行复制
+    - name: Check If File Exists
+      run: |
+        pwd
+        
+        if [ -f TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json ]; then
+          echo "File exists. Copying..."
+          cp -f TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json data/rss/rss_subscription.json
+        else
+          echo "File does not exist. Skipping copy operation."
+        fi
     # 接下来提交到EuDs63/EuDs63.github.io仓库
     - name: clone EuDs63/EuDs63.github.io
       uses: actions/checkout@v3
@@ -42,8 +53,10 @@ jobs:
         repository: 'EuDs63/EuDs63.github.io'
     - name: copy file to another repo
       run: |
-        ls ../TinyTinyRSS-OPML-to-MD-Table
-        cp -f ../TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json data/rss/rss_subscription.json
+        pwd
+
+        ls ../../
+        
     # 把修改后的数据提交到 GitHub 仓库
     - name: Git Add and Commit
       uses: EndBug/add-and-commit@v9
