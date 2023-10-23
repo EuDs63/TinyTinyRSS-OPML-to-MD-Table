@@ -42,7 +42,7 @@ jobs:
         repository: 'EuDs63/EuDs63.github.io'
     - name: copy file to another repo
       run: |
-        ls ../
+        ls ../TinyTinyRSS-OPML-to-MD-Table
         cp -f ../TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json data/rss/rss_subscription.json
     # 把修改后的数据提交到 GitHub 仓库
     - name: Git Add and Commit
