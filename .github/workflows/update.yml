@@ -58,8 +58,10 @@ jobs:
         cp -f /home/runner/work/TinyTinyRSS-OPML-to-MD-Table/rss_subscription.json data/rss/rss_subscription.json
         
     # 把修改后的数据提交到 GitHub 仓库
-    - name: Git Add and Commit
-      uses: EndBug/add-and-commit@v9
-      with:
-        message: 'update rss data'
-        add: './data/rss'
+    - name: Push changes
+      run: |
+        git add data/rss
+        git commit -m 'update new opml' || echo "nothing to commit"
+        git push https://TOKEN@github.com/EuDs63/EuDs63.github.io.git
+      env:
+        TOKEN: ${{ secrets.PAT }}
