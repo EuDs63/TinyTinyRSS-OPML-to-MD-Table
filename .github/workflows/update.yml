@@ -35,11 +35,18 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-    # 接下来是提交到另一个仓库的操作
-    - name: clone 
+    # 接下来提交到EuDs63/EuDs63.github.io仓库
+    - name: clone EuDs63/EuDs63.github.io
       uses: actions/checkout@v3
       with:
         repository: 'EuDs63/EuDs63.github.io'
-    - name: commit to another repo
+    - name: copy file to another repo
       run: |
-        ls
+        ls ../
+        cp -f ../rss_subscription.json data/rss/rss_subscription.json
+    # 把修改后的数据提交到 GitHub 仓库
+    - name: Git Add and Commit
+      uses: EndBug/add-and-commit@v9
+      with:
+        message: 'update rss data'
+        add: './data/rss'
