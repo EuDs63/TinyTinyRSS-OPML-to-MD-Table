@@ -60,7 +60,9 @@ jobs:
     # 把修改后的数据提交到 GitHub 仓库
     - name: Push changes
       run: |
-        git add data/rss
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add .
         git commit -m 'update new opml' || echo "nothing to commit"
         git push https://TOKEN@github.com/EuDs63/EuDs63.github.io.git
       env:
