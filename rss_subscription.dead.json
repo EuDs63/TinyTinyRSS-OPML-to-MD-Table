@@ -1,0 +1,343 @@
+{
+  "data": [
+    {
+      "title": "/ Blog - MAKE / MUSIC",
+      "feed_url": "http://www.makemusic.sg/blog?format=rss",
+      "html_url": "http://www.makemusic.sg/blog/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:35+08:00"
+    },
+    {
+      "title": "[Unknown]",
+      "feed_url": "https://pichu.moe/feed.xml",
+      "html_url": null,
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:42+08:00"
+    },
+    {
+      "title": "AabyssZG's Blog",
+      "feed_url": "https://blog.zgsec.cn/index.php/feed/",
+      "html_url": "https://blog.zgsec.cn/",
+      "last_error": "<unknown>:2:679: not well-formed (invalid token)",
+      "checked_at": "2026-10-15T15:58:35+08:00"
+    },
+    {
+      "title": "Ch3nyang’s Blog",
+      "feed_url": "https://ch3nyang.top/feed.xml",
+      "html_url": "https://ch3nyang.top/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:35+08:00"
+    },
+    {
+      "title": "Chenyang's blog",
+      "feed_url": "http://blog.ch3nyang.top/feed.xml",
+      "html_url": "https://wcy-dt.github.io",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:34+08:00"
+    },
+    {
+      "title": "CorrectRoad's Blog",
+      "feed_url": "https://correctroadh.github.io/index.xml",
+      "html_url": "https://correctroadh.github.io/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:35+08:00"
+    },
+    {
+      "title": "drdr.xp Blog",
+      "feed_url": "http://drmingdrmer.github.io/feed.xml",
+      "html_url": "https://drmingdrmer.github.io/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:34+08:00"
+    },
+    {
+      "title": "EuDs's blog",
+      "feed_url": "https://euds63.github.io/atom.xml",
+      "html_url": "http://euds63.github.io/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:34+08:00"
+    },
+    {
+      "title": "F叔的学习笔记",
+      "feed_url": "https://flaneur2020.github.io/atom.xml",
+      "html_url": "https://flaneur2020.github.io/atom.xml",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:36+08:00"
+    },
+    {
+      "title": "JerryQu 的小站",
+      "feed_url": "https://imququ.com/rss.html",
+      "html_url": "https://imququ.com",
+      "last_error": "<unknown>:2:0: syntax error",
+      "checked_at": "2026-10-15T15:58:34+08:00"
+    },
+    {
+      "title": "JungleyNet",
+      "feed_url": "https://www.jungley.net/rss/",
+      "html_url": "https://www.jungley.net/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:36+08:00"
+    },
+    {
+      "title": "Kaede Akatsuki",
+      "feed_url": "http://kaedea.com/atom.xml",
+      "html_url": "https://kaedea.com/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:34+08:00"
+    },
+    {
+      "title": "Konata Tech Blog",
+      "feed_url": "https://tech.konata.co/atom.xml",
+      "html_url": "https://tech.konata.co/",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:37+08:00"
+    },
+    {
+      "title": "Michael的博客",
+      "feed_url": "https://michaeljier.cn/feed.xml",
+      "html_url": "http://www.yingjiechen.cn/blog",
+      "last_error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:37+08:00"
+    },
+    {
+      "title": "No Headback",
+      "feed_url": "http://xargin.com/rss/",
+      "html_url": "http://xargin.com/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:37+08:00"
+    },
+    {
+      "title": "Panda Home",
+      "feed_url": "https://old-panda.com/feed/",
+      "html_url": "https://old-panda.com",
+      "last_error": "<unknown>:2:69: not well-formed (invalid token)",
+      "checked_at": "2026-10-15T15:58:38+08:00"
+    },
+    {
+      "title": "Personal Site of Shengxin Li",
+      "feed_url": "https://mike3090.github.io/index.xml",
+      "html_url": "https://mike3090.github.io/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:38+08:00"
+    },
+    {
+      "title": "plantegg",
+      "feed_url": "https://plantegg.github.io/atom.xml",
+      "html_url": "https://plantegg.github.io/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:43+08:00"
+    },
+    {
+      "title": "Shimmer RSS",
+      "feed_url": "https://wp-boke.work/rss",
+      "html_url": "https://wp-boke.work",
+      "last_error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'wp-boke.work'. (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:39+08:00"
+    },
+    {
+      "title": "ShrekShao",
+      "feed_url": "http://shrekshao.github.io/feed.xml",
+      "html_url": "http://shrekshao.github.io/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:39+08:00"
+    },
+    {
+      "title": "Sulv's Blog",
+      "feed_url": "https://www.sulvblog.cn/index.xml",
+      "html_url": "https://www.sulvblog.cn/",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:40+08:00"
+    },
+    {
+      "title": "TL;DR",
+      "feed_url": "https://mazzzystar.github.io/atom.xml",
+      "html_url": "https://mazzzystar.github.io/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:40+08:00"
+    },
+    {
+      "title": "Water Space",
+      "feed_url": "https://www.waterwater.moe/atom.xml",
+      "html_url": "http://lawvs.github.io/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:41+08:00"
+    },
+    {
+      "title": "ximu",
+      "feed_url": "https://xlog.timero.xyz/feed/xml",
+      "html_url": "https://ximu.xlog.app",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:44+08:00"
+    },
+    {
+      "title": "博客园 - ChokCoco",
+      "feed_url": "https://www.cnblogs.com/coco1s/rss",
+      "html_url": "https://www.cnblogs.com/coco1s/rss",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:45+08:00"
+    },
+    {
+      "title": "博客园 - marsggbo",
+      "feed_url": "https://www.cnblogs.com/marsggbo/rss",
+      "html_url": "https://www.cnblogs.com/marsggbo/rss",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:45+08:00"
+    },
+    {
+      "title": "博客园 - nmydt",
+      "feed_url": "https://www.cnblogs.com/nmydt/rss",
+      "html_url": "https://www.cnblogs.com/nmydt/rss",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:45+08:00"
+    },
+    {
+      "title": "博客园 - 果冻迪迪",
+      "feed_url": "https://www.cnblogs.com/guodongdidi/rss",
+      "html_url": "https://www.cnblogs.com/guodongdidi/rss",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:45+08:00"
+    },
+    {
+      "title": "叁叁得久",
+      "feed_url": "https://blogatlarge.com/chicaho/?feed=rss2",
+      "html_url": "https://blogatlarge.com/chicaho",
+      "last_error": "HTTP 403",
+      "checked_at": "2026-10-15T15:58:45+08:00"
+    },
+    {
+      "title": "吃不饱",
+      "feed_url": "https://www.dostarve.xyz/index.php/feed/",
+      "html_url": "https://www.dostarve.xyz",
+      "last_error": "HTTP 200: not a parseable feed",
+      "checked_at": "2026-10-15T15:58:46+08:00"
+    },
+    {
+      "title": "开源实验室",
+      "feed_url": "http://www.kymjs.com/feed.xml",
+      "html_url": "https://www.kymjs.com/",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:53+08:00"
+    },
+    {
+      "title": "戴兜的小屋",
+      "feed_url": "https://daidr.me/rsslatest.xml",
+      "html_url": "https://daidr.me",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:47+08:00"
+    },
+    {
+      "title": "所有文章 - zu1k",
+      "feed_url": "https://zu1k.com/posts/rss.xml",
+      "html_url": "https://zu1k.com/posts/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:47+08:00"
+    },
+    {
+      "title": "扯氮集",
+      "feed_url": "http://weiwuhui.com/feed",
+      "html_url": "http://weiwuhui.com",
+      "last_error": "URLError: <urlopen error timed out>",
+      "checked_at": "2026-10-15T15:58:47+08:00"
+    },
+    {
+      "title": "旅行者的随想",
+      "feed_url": "https://blog.besscroft.com/atom.xml",
+      "html_url": "https://blog.besscroft.com/",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:48+08:00"
+    },
+    {
+      "title": "无二博客",
+      "feed_url": "https://1kb.day/atom.xml",
+      "html_url": "https://hostalk.net/",
+      "last_error": "<unknown>:2:0: syntax error",
+      "checked_at": "2026-10-15T15:58:34+08:00"
+    },
+    {
+      "title": "春水煎茶",
+      "feed_url": "https://writings.sh/feed.xml",
+      "html_url": "https://writings.sh/",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:48+08:00"
+    },
+    {
+      "title": "桃罐",
+      "feed_url": "https://freshp0325.xyz/feed/post.xml",
+      "html_url": "https://freshp0325.xyz/posts/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:48+08:00"
+    },
+    {
+      "title": "此方方有限公司",
+      "feed_url": "https://blog.konata.co/?feed=rss2",
+      "html_url": "https://blog.konata.co",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:48+08:00"
+    },
+    {
+      "title": "海德沙龙·翻译组",
+      "feed_url": "https://translations.headsalon.org/index.xml",
+      "html_url": "https://translations.headsalon.org/",
+      "last_error": "HTTP 522",
+      "checked_at": "2026-10-15T15:58:53+08:00"
+    },
+    {
+      "title": "白水房",
+      "feed_url": "https://xlog.whitewater.wang/feed",
+      "html_url": "https://xlog.whitewater.wang",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:49+08:00"
+    },
+    {
+      "title": "简单的小站",
+      "feed_url": "https://wangyw15.top/index.xml",
+      "html_url": "https://wangyw15.top/",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:50+08:00"
+    },
+    {
+      "title": "自拙集",
+      "feed_url": "https://densecollections.top/atom.xml",
+      "html_url": "http://densecollections.top/",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:50+08:00"
+    },
+    {
+      "title": "致远博客 - 开往-Travelling 的评论",
+      "feed_url": "https://blog.uniartisan.com/feed/atom/archives/Travelling.html",
+      "html_url": "https://blog.uniartisan.com/archives/Travelling.html",
+      "last_error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1029)>",
+      "checked_at": "2026-10-15T15:58:51+08:00"
+    },
+    {
+      "title": "西绪福斯的神话",
+      "feed_url": "https://blogatlarge.com/camus/?feed=rss2",
+      "html_url": "https://blogatlarge.com/camus",
+      "last_error": "HTTP 403",
+      "checked_at": "2026-10-15T15:58:51+08:00"
+    },
+    {
+      "title": "路人酱",
+      "feed_url": "https://passerby5566.xlog.app/feed/xml",
+      "html_url": "https://passerby5566.xlog.app",
+      "last_error": "HTTP 530",
+      "checked_at": "2026-10-15T15:58:54+08:00"
+    },
+    {
+      "title": "雨探青鸟",
+      "feed_url": "https://lmzyoyo.top/atom.xml",
+      "html_url": "https://lmzyoyo.top",
+      "last_error": "HTTP 404",
+      "checked_at": "2026-10-15T15:58:52+08:00"
+    },
+    {
+      "title": "青山绿水",
+      "feed_url": "https://eirms.com/feed",
+      "html_url": "https://eirms.com",
+      "last_error": "<unknown>:2:0: syntax error",
+      "checked_at": "2026-10-15T15:58:52+08:00"
+    }
+  ],
+  "last_updated": "2026-10-15",
+  "count": 48,
+  "note": "Probed dead/failing feeds; weekly check_dead.py may revive"
+}
