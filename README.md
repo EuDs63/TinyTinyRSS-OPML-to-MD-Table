@@ -38,8 +38,10 @@
    - 运行时需要用到的变量，是用的secret。我之前以为secret的value只能是字符串。但[Github Action中python获取仓库的secrets](https://nekokiku.cn/2020/12/22/2020-12-22-Github-Action%E4%B8%ADpython%E8%8E%B7%E5%8F%96%E4%BB%93%E5%BA%93%E7%9A%84secrets/)中提到，可以把一整个yml文件放在value里面。所以我就想那json文件应该也可以。试了下确实能行。这样我的代码需要修改的地方就很少了。
    - workflow的触发方式,要添加手动触发，需加上`workflow_dispatch:`
 5. 尝试实现功能4：每次运行时，将自动修改README.md;
-   - 先是用正则表达式实现：读取文件内容到一个字符串中，再去匹配`r'## 我的订阅
-**更新时间：2026-10-15**
+   - 先是用正则表达式实现：读取文件内容到一个字符串中，再去匹配`r'
+
+## 我的订阅
+**更新时间：2026-10-19**
 | Title | Feed URL | Html URL|
 | --- | --- | --- |
 | [Unknown] | https://blog.sina.com.cn/rss/1283569510.xml | https://blog.sina.com.cn/rss/1283569510.xml|
@@ -84,6 +86,7 @@
 | Manjusaka | https://www.manjusaka.blog/atom.xml | https://manjusaka.blog/|
 | Max's Zone | https://blog.maxxsoft.net/index.php/feed/ | https://blog.maxxsoft.net/|
 | MeteorCollector | https://meteorcollector.github.io//feed.xml | https://meteorcollector.github.io//|
+| Michael的博客 | https://michaeljier.cn/feed.xml | http://www.yingjiechen.cn/blog|
 | MINIRPLUS | https://blog.minirplus.com/feed/ | https://blog.minirplus.com|
 | mrchi 的博客 | https://mrchi.cc/index.xml | https://mrchi.cc/|
 | Normal Mode | https://normalmo.de/index.xml | https://normalmo.de/|
