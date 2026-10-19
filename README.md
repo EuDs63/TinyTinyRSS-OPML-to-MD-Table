@@ -133,7 +133,7 @@
 | Manjusaka | https://www.manjusaka.blog/atom.xml | https://manjusaka.blog/|
 | Max's Zone | https://blog.maxxsoft.net/index.php/feed/ | https://blog.maxxsoft.net/|
 | MeteorCollector | https://meteorcollector.github.io//feed.xml | https://meteorcollector.github.io//|
-| Michael的博客 | https://michaeljier.cn/feed.xml | http://www.yingjiechen.cn/blog|
+| Michael的博客 | https://michaeljier.cn/feed.xml | https://www.michaeljier.cn/blog|
 | MINIRPLUS | https://blog.minirplus.com/feed/ | https://blog.minirplus.com|
 | mrchi 的博客 | https://mrchi.cc/index.xml | https://mrchi.cc/|
 | Normal Mode | https://normalmo.de/index.xml | https://normalmo.de/|
