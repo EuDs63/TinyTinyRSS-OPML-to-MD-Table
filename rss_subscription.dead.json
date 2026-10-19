@@ -92,13 +92,6 @@
       "checked_at": "2026-10-15T15:58:37+08:00"
     },
     {
-      "title": "Michael的博客",
-      "feed_url": "https://michaeljier.cn/feed.xml",
-      "html_url": "http://www.yingjiechen.cn/blog",
-      "last_error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1029)>",
-      "checked_at": "2026-10-15T15:58:37+08:00"
-    },
-    {
       "title": "No Headback",
       "feed_url": "http://xargin.com/rss/",
       "html_url": "http://xargin.com/",
@@ -337,7 +330,7 @@
       "checked_at": "2026-10-15T15:58:52+08:00"
     }
   ],
-  "last_updated": "2026-10-15",
-  "count": 48,
+  "last_updated": "2026-10-19",
+  "count": 47,
   "note": "Probed dead/failing feeds; weekly check_dead.py may revive"
 }
