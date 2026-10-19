@@ -211,6 +211,11 @@
       "html_url": "https://meteorcollector.github.io//"
     },
     {
+      "title": "Michael的博客",
+      "feed_url": "https://michaeljier.cn/feed.xml",
+      "html_url": "http://www.yingjiechen.cn/blog"
+    },
+    {
       "title": "MINIRPLUS",
       "feed_url": "https://blog.minirplus.com/feed/",
       "html_url": "https://blog.minirplus.com"
@@ -646,6 +651,6 @@
       "html_url": "https://innei.in"
     }
   ],
-  "last_updated": "2026-10-15",
-  "count": 129
+  "last_updated": "2026-10-19",
+  "count": 130
 }
