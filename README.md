@@ -88,11 +88,9 @@
 - [YAML Validator](https://codebeautify.org/yaml-validator)
 
 ## 我的订阅
-**更新时间：2026-10-19**
+**更新时间：2026-10-20**
 | Title | Feed URL | Html URL|
 | --- | --- | --- |
-| [Unknown] | https://blog.sina.com.cn/rss/1283569510.xml | https://blog.sina.com.cn/rss/1283569510.xml|
-| [Unknown] | https://s3.laisky.com/public/rss.xml | None|
 | A Cup of Air | https://acupofair.github.io/index.xml | https://acupofair.github.io/|
 | Ash Furrow's Blog | https://ashfurrow.com//feed.xml | https://ashfurrow.com|
 | Bigbyto | https://wiyi.org/feed.xml | https://wiyi.org/|
@@ -112,7 +110,7 @@
 | Frost's Blog | https://frostming.com/feed.xml | https://frostming.com/|
 | Grifel | https://grifel.dev/rss.xml | https://grifel.dev/|
 | Hanshi Sun's Blog | https://blog.preminstrel.com/index.xml | https://blog.preminstrel.com/|
-| Homepage on Rehoni \| 罗皓 | https://rehoni.github.io/index.xml | https://rehoni.github.io/|
+| Homepage on Rehoni | 罗皓 | https://rehoni.github.io/index.xml | https://rehoni.github.io/|
 | Huli's blog | https://life.huli.tw/atom.xml | https://life.huli.tw/|
 | Huli's blog | https://blog.huli.tw/atom-ch.xml | https://blog.huli.tw/|
 | jacobian.org | https://jacobian.org/index.xml | https://jacobian.org/|
@@ -126,6 +124,7 @@
 | Kiyan's Blog | https://blog.dotvast.cc/index.xml | https://blog.dotvast.cc/|
 | kxxt's blog | https://www.kxxt.dev/rss.xml | https://www.kxxt.dev|
 | laike9m's blog | https://laike9m.com/blog/rss/ | https://laike9m.com/blog/rss|
+| Laisky's Blog | https://s3.laisky.com/public/rss.xml | https://blog.laisky.com/|
 | Largesse's blog | https://largesse.netlify.app/atom.xml | https://largesse.12306.recipes/|
 | LearnData-开源笔记 | https://newzone.top/rss.xml | https://newzone.top/|
 | Li. | https://bye-lemon.github.io/atom.xml | http://bye-lemon.github.io/|
@@ -172,7 +171,7 @@
 | yihong0618's gitblog | https://raw.githubusercontent.com/yihong0618/gitblog/master/feed.xml | https://github.com/yihong0618/gitblog|
 | Yuko's Blog | https://yuukoamamiya.github.io/index.xml | https://blog.amamiyayuuko.com/|
 | Yulin Lewis' Blog | https://lewky.cn/index.xml | https://lewky.cn/|
-| Zar_SY \| 小屋 | https://daftneko.com/atom.xml | https://daftneko.com|
+| Zar_SY | 小屋 | https://daftneko.com/atom.xml | https://daftneko.com|
 | Zgao's blog | https://zgao.top/feed/ | https://zgao.top|
 | zmt | https://zmt.pub/feed/ | https://zmt.pub|
 | zu1k | https://zu1k.com/rss.xml | https://zu1k.com/|
@@ -180,7 +179,7 @@
 | 一个球的博客 | https://jw1.dev/atom.xml | https://jw1.dev/|
 | 一派胡言 | https://zhangyet.github.io/feed.xml | https://zhangyet.github.io/|
 | 万事屋 | https://tcya.xyz/feed.xml | https://tcya.xyz/|
-| 中文日志 on Rehoni \| 罗皓 | https://rehoni.github.io/cn/index.xml | https://rehoni.github.io/cn/|
+| 中文日志 on Rehoni | 罗皓 | https://rehoni.github.io/cn/index.xml | https://rehoni.github.io/cn/|
 | 云游君的小站 | https://www.yunyoujun.cn/atom.xml | https://www.yunyoujun.cn/|
 | 云风的 BLOG | https://blog.codingnow.com/atom.xml | https://blog.codingnow.com/|
 | 余光的部落格 | https://idawnlight.com/atom.xml | https://idawnlight.com/|

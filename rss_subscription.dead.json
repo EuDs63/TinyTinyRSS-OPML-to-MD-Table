@@ -328,9 +328,16 @@
       "html_url": "https://eirms.com",
       "last_error": "<unknown>:2:0: syntax error",
       "checked_at": "2026-10-15T15:58:52+08:00"
+    },
+    {
+      "title": "[Unknown]",
+      "feed_url": "https://blog.sina.com.cn/rss/1283569510.xml",
+      "html_url": "https://blog.sina.com.cn/rss/1283569510.xml",
+      "last_error": "empty feed: HTTP 200 but no title/link/entries",
+      "checked_at": "2026-10-20T10:40:27+08:00"
     }
   ],
-  "last_updated": "2026-10-19",
-  "count": 47,
+  "last_updated": "2026-10-20",
+  "count": 48,
   "note": "Probed dead/failing feeds; weekly check_dead.py may revive"
 }
