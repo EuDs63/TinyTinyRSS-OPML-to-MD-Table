@@ -15,6 +15,13 @@
       "checked_at": "2026-10-15T15:58:42+08:00"
     },
     {
+      "title": "[Unknown]",
+      "feed_url": "https://blog.sina.com.cn/rss/1283569510.xml",
+      "html_url": "https://blog.sina.com.cn/rss/1283569510.xml",
+      "last_error": "empty feed: HTTP 200 RSS shell, no title/link/entries (false revival; version-only)",
+      "checked_at": "2026-11-02T09:08:21+08:00"
+    },
+    {
       "title": "AabyssZG's Blog",
       "feed_url": "https://blog.zgsec.cn/index.php/feed/",
       "html_url": "https://blog.zgsec.cn/",
@@ -331,6 +338,6 @@
     }
   ],
   "last_updated": "2026-11-02",
-  "count": 47,
+  "count": 48,
   "note": "Probed dead/failing feeds; weekly check_dead.py may revive"
 }
